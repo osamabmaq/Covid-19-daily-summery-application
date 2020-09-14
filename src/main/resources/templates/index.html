@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Covid-19 daily summary Application</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container mt-3">
+    <h1>Covid-19 daily summary Application</h1>
+    <p>This application shows a daily summary for infected, recovered, and dead cases of Covid-19 pandemic.</p>
+</div>
+<div class="jumbotron container">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4"><span th:text="${global.totalConfirmed}"></span></h1>
+            <p class="lead">Total reported cases since last daily update</p>
+        </div>
+        <div class="col">
+            <h1 class="display-4"><span th:text="${global.totalRecovered}"></span></h1>
+            <p class="lead">Total reported recovered cases since last daily update</p>
+        </div>
+    </div>
+    <hr class="my-4">
+    <h1 class="display-4"><span th:text="${global.totalDeaths}"></span></h1>
+    <p class="lead">Total reported dead cases since last daily update</p>
+</div>
+<table class="table container">
+    <thead>
+    <tr>
+        <th scope="col">Country</th>
+        <th scope="col">Total Reported</th>
+        <th scope="col">Total Recovered</th>
+        <th scope="col">Total Deaths</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="country: ${countries}">
+        <td th:text="${country.countryName}"></td>
+        <td th:text="${country.totalConfirmed}"></td>
+        <td th:text="${country.totalRecovered}"></td>
+        <td th:text="${country.totalDeaths}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
