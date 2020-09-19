@@ -1,9 +1,9 @@
-package com.example.Covid19.infection.tracker.services;
+package com.osama.covid19summaryapp.services;
 
-import com.example.Covid19.infection.tracker.component.JSONObjectVirusSummaryConverter;
-import com.example.Covid19.infection.tracker.component.SummaryDownloader;
-import com.example.Covid19.infection.tracker.dto.CountrySummary;
-import com.example.Covid19.infection.tracker.dto.GlobalSummary;
+import com.osama.covid19summaryapp.components.JSONObjectVirusSummaryConverter;
+import com.osama.covid19summaryapp.components.SummaryDownloader;
+import com.osama.covid19summaryapp.dto.CountrySummary;
+import com.osama.covid19summaryapp.dto.GlobalSummary;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

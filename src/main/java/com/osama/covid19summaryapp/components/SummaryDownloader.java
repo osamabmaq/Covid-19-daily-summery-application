@@ -1,5 +1,6 @@
-package com.example.Covid19.infection.tracker.component;
+package com.osama.covid19summaryapp.components;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -10,7 +11,8 @@ import java.net.http.HttpResponse;
 
 @Component
 public class SummaryDownloader {
-    private final String REST_API_URL = "https://api.covid19api.com/summary";
+    @Value("${rest.api.url}")
+    private String REST_API_URL;
 
     public String downloadVirusSummary() {
         HttpRequest request = HttpRequest.newBuilder(URI.create(REST_API_URL)).build();

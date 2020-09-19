@@ -1,6 +1,6 @@
-package com.example.Covid19.infection.tracker.controllers;
+package com.osama.covid19summaryapp.controllers;
 
-import com.example.Covid19.infection.tracker.services.VirusSummaryProvider;
+import com.osama.covid19summaryapp.services.VirusSummaryProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

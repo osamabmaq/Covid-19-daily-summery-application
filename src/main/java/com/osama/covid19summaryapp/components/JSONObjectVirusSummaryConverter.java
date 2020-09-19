@@ -1,9 +1,9 @@
-package com.example.Covid19.infection.tracker.component;
+package com.osama.covid19summaryapp.components;
 
 
-import com.example.Covid19.infection.tracker.dto.AbstractVirusSummary;
-import com.example.Covid19.infection.tracker.dto.CountrySummary;
-import com.example.Covid19.infection.tracker.dto.GlobalSummary;
+import com.osama.covid19summaryapp.dto.AbstractVirusSummary;
+import com.osama.covid19summaryapp.dto.CountrySummary;
+import com.osama.covid19summaryapp.dto.GlobalSummary;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Component;

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<!--/*@thymesVar id="countries" type="java.util.List<com.osama.covid19summaryapp.dto.CountrySummary>"*/-->
+<!--/*@thymesVar id="global" type="com.osama.covid19summaryapp.dto.GlobalSummary"*/-->
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +26,8 @@
 <div class="jumbotron container">
     <div class="row">
         <div class="col">
-            <h1 class="display-4"><span th:text="${global.totalConfirmed}"></span></h1>
+            <h1 class="display-4">
+                <span th:text="${global.totalConfirmed}"></span></h1>
             <p class="lead">Total reported cases since last daily update</p>
         </div>
         <div class="col">

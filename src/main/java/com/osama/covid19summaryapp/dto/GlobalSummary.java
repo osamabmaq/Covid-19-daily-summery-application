@@ -1,4 +1,4 @@
-package com.example.Covid19.infection.tracker.dto;
+package com.osama.covid19summaryapp.dto;
 
 public class GlobalSummary extends AbstractVirusSummary{
 }
