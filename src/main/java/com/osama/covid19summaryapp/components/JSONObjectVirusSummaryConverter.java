@@ -10,8 +10,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class JSONObjectVirusSummaryConverter {
-    private final JSONParser jsonParser = new JSONParser();
-
     public GlobalSummary convertToGlobalSummary(JSONObject globalSummaryJSONObject) {
         GlobalSummary globalSummary = new GlobalSummary();
         setCasesNumbers(globalSummaryJSONObject, globalSummary);
@@ -26,6 +24,7 @@ public class JSONObjectVirusSummaryConverter {
 
     private void setCasesNumbers(JSONObject summaryJSONObject,
                                  AbstractVirusSummary virusSummary) {
+
         virusSummary.setTotalConfirmed(toInt(summaryJSONObject.get("TotalConfirmed")));
         virusSummary.setTotalDeaths(toInt(summaryJSONObject.get("TotalDeaths")));
         virusSummary.setTotalRecovered(toInt(summaryJSONObject.get("TotalRecovered")));
