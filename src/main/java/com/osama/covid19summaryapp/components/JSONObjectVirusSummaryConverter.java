@@ -5,7 +5,6 @@ import com.osama.covid19summaryapp.dto.AbstractVirusSummary;
 import com.osama.covid19summaryapp.dto.CountrySummary;
 import com.osama.covid19summaryapp.dto.GlobalSummary;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Component;
 
 @Component

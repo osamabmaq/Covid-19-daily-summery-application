@@ -1,0 +1,10 @@
+table {
+    text-align: left;
+    position: relative;
+    border-collapse: collapse;
+}
+th {
+    background: #e8ecef;
+    position: sticky;
+    top: 0;
+}

@@ -17,13 +17,19 @@ public class MainController {
         this.virusSummaryProvider = virusSummaryProvider;
     }
 
-    @GetMapping("*")
-    public String home(Model model){
+    @GetMapping("/")
+    public String home(Model model) {
         model.addAllAttributes(getHomePageModelAttributes());
         return "index";
     }
-    private Map<String, ? super Object> getHomePageModelAttributes(){
+
+    private Map<String, ?> getHomePageModelAttributes() {
         return Map.of("global", virusSummaryProvider.getGlobalSummary(),
                 "countries", virusSummaryProvider.getCountiesSummaryList());
     }
+/*
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }*/
 }

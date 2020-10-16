@@ -23,7 +23,7 @@ public class VirusSummaryProvider {
     private GlobalSummary globalSummary;
     private List<CountrySummary> countriesSummaryList;
 
-    private JSONParser parser = new JSONParser();
+    private final JSONParser parser = new JSONParser();
 
     @Autowired
     public VirusSummaryProvider(SummaryDownloader summaryDownloader,
@@ -54,8 +54,7 @@ public class VirusSummaryProvider {
             JSONObject countrySummary = (JSONObject) obj;
             if (isEnemy(countrySummary))
                 continue;
-            countriesSummaryList.add(
-                    jsonObjectVirusSummaryConverter.convertToCountrySummary(countrySummary));
+            countriesSummaryList.add(jsonObjectVirusSummaryConverter.convertToCountrySummary(countrySummary));
         }
     }
 

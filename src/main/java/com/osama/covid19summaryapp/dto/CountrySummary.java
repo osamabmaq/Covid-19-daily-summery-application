@@ -1,6 +1,6 @@
 package com.osama.covid19summaryapp.dto;
 
-public class CountrySummary extends AbstractVirusSummary{
+public class CountrySummary extends AbstractVirusSummary {
     private final String countryName;
 
     public CountrySummary(String countryName) {
@@ -9,5 +9,10 @@ public class CountrySummary extends AbstractVirusSummary{
 
     public String getCountryName() {
         return countryName;
+    }
+
+    @Override
+    public String toString() {
+        return "country : " + getCountryName()+", "+super.toString();
     }
 }

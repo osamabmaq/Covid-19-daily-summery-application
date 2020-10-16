@@ -28,4 +28,11 @@ public abstract class AbstractVirusSummary {
     public void setTotalRecovered(int totalRecovered) {
         this.totalRecovered = GroupsCommaSeparatedNumber.createWithThreeLengthGroups(totalRecovered);
     }
+
+    @Override
+    public String toString() {
+        return "Total confirmed : " + getTotalConfirmed()
+                + ", Total recovered : " + getTotalRecovered()
+                + ", Total deaths :" + getTotalDeaths();
+    }
 }
