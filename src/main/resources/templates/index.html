@@ -21,10 +21,8 @@
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container mt-3 bla">
-    <h1>Covid-19 daily summary Application</h1>
-    <p>This application shows a daily summary for infected, recovered, and dead cases of Covid-19 pandemic.</p>
-</div>
+<th:block th:insert="fragments/app-navbar :: navbar" th:remove="tag"/>
+<th:block th:insert="fragments/app-description :: description" th:remove="tag"/>
 <div class="jumbotron container">
     <div class="row">
         <div class="col">
@@ -51,7 +49,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="country: ${countries}">
+    <tr th:each="country: ${countries}" class="country-status-row">
         <td th:text="${country.countryName}"></td>
         <td th:text="${country.totalConfirmed}"></td>
         <td th:text="${country.totalRecovered}"></td>
@@ -59,14 +57,6 @@
     </tr>
     </tbody>
 </table>
-<hr>
-<footer class="container">
-    <p class="text-center">
-        This App was made by
-        <a href="https://www.linkedin.com/in/osama-abu-qattam-2a989b169/">
-            Osama Abu Qattam
-        </a>
-    </p>
-</footer>
+<th:block th:replace="fragments/app-footer :: footer"/>
 </body>
 </html>

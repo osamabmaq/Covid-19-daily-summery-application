@@ -3,12 +3,12 @@ package com.osama.covid19summaryapp.dto;
 import java.text.DecimalFormat;
 
 public class GroupsCommaSeparatedNumber {
-    private final String threeGroupingColonSeparatedNumber;
+    private final String groupsCommaSeparatedNumberString;
 
     private GroupsCommaSeparatedNumber(int number, byte groupLength) {
         if (groupLength < 1)
             throw new IllegalArgumentException();
-        threeGroupingColonSeparatedNumber = makeGroupsFormattedNumber(number, groupLength);
+        groupsCommaSeparatedNumberString = makeGroupsFormattedNumber(number, groupLength);
     }
 
     public static GroupsCommaSeparatedNumber createWithThreeLengthGroups(int number) {
@@ -27,6 +27,6 @@ public class GroupsCommaSeparatedNumber {
 
     @Override
     public String toString() {
-        return threeGroupingColonSeparatedNumber;
+        return groupsCommaSeparatedNumberString;
     }
 }

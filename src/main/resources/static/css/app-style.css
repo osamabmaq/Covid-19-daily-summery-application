@@ -8,3 +8,7 @@ th {
     position: sticky;
     top: 0;
 }
+.country-status-row:hover {
+    background-color: #eff3f6;
+    transition: 0.2s;
+}
